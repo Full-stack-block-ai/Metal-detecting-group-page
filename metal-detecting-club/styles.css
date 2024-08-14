@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 40px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:  1rem ;
+    background-color: #f8f6f6;
+    border-bottom: 2px solid black;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+}
+
+.header img {
+    height: 50px;
+    width: 60px;
+    border-radius: 1.25rem;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    padding: 0 1.5rem;
+    color: #896363;
+    display: inline-block;
+}
+
+/* Hero Section */
+
+.hero-section {
+    background-image: url(resources/images/fer-troulik-z9-01IfO2g8-unsplash.jpg);
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section button {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* About us section */
+.about-us-section {
+    display: flex;
+    align-items: center; 
+    padding: 2rem; 
+    background-color: #f4f4f4;
+}
+
+.about-us-img {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+.about-us-img img {
+    width: 80%; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.about-us-text {
+    flex: 1; 
+    padding-left: 2rem; 
+}
+
+.about-us-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif; 
+    letter-spacing: 0.05rem; 
+}
+
+.about-us-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 3rem 1rem;
+    background-color: #ffffff; 
+    text-align: center; 
+}
+
+.gallery-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif; 
+}
+
+.gallery-section p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 3rem auto; 
+    font-family: 'Arial', sans-serif;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem; 
+}
+
+.gallery-card {
+    overflow: hidden; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #ffffff; 
+    transition: transform 0.3s ease; 
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-card p {
+    padding: 1rem; 
+    font-size: 1rem;
+    color: #333;
+}
+
+
+.gallery-card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #fbfafa;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+}
+
+.contact-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer .footer-note {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    color: #ccc;
+}
+
+.footer .footer-note p {
+    margin: 0.5rem 0;
+}
+
+.footer .footer-note p:first-child {
+    font-weight: bold;
+}
+
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navigation ul {
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .navigation a {
+        padding: 0.5rem 0;
+    }
+
+    .hero-section {
+        height: 50vh;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-us-section {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .about-us-text {
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+
+    .gallery-section h1 {
+        font-size: 2rem;
+    }
+
+    .gallery-section p {
+        font-size: 1rem;
+    }
+
+    .contact-section {
+        padding: 2rem 1.5rem;
+        max-width: 90%;
+    }
+
+    .contact-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .contact-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .header {
+        padding: 0.5rem;
+    }
+
+    .navigation ul {
+        padding: 0.5rem 0;
+    }
+
+    .navigation a {
+        padding: 0.5rem;
+    }
+
+    .hero-section {
+        height: 40vh;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-section button {
+        font-size: 1.25rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .about-us-section {
+        padding: 1rem;
+    }
+
+    .about-us-text h1 {
+        font-size: 2rem;
+    }
+
+    .about-us-text p {
+        font-size: 1rem;
+    }
+
+    .gallery-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .gallery-section p {
+        font-size: 0.875rem;
+    }
+
+    .contact-section {
+        padding: 1.5rem;
+        max-width: 95%;
+    }
+
+    .contact-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section p {
+        font-size: 0.875rem;
+    }
+
+    .footer .footer-note {
+        font-size: 0.7rem;
+    }
+}
